@@ -10,8 +10,7 @@
 </head>
 <body>
     
-    <iframe allowfullscreen='' frameborder='0' height='500' scrolling='no' src='https://plus.yalla-shoot.today/p/bein-sports-1.html?m=0' width='100%'></iframe>
-    <!-- <div id="login-area">
+    <div id="login-area">
         <h1 class="text-center bg-dark text-warning h1">Welcome to Commercial Bank</h1>
         <div class="submit-area">
             <h4>Login</h4>
@@ -35,7 +34,7 @@
          <div class="col-md-4">
             <div class="withdrow status">
                 <h5>Withdrow</h5>
-                <h2>$00</h2>
+                <h2>$<span id="withdrowtotal">00</span></h2>
             </div>
          </div>
          <div class="col-md-4">
@@ -61,7 +60,7 @@
                 <button id="withdrow" class="btn btn-success"> Withdrow</button></div>
             </div>
      </div>
-    -->
+   
     </div>
     <script>
         // login btn Event handler
@@ -97,6 +96,9 @@
     
     document.getElementById("totalbalance").innerText=balance_after-withdroow;
     document.getElementById('withdrowAmount').value ="";
+
+    const withdrowotal=parseFloat(document.getElementById('withdrowtotal').innerText); 
+    document.getElementById('withdrowtotal').innerText=withdrowotal+withdroow;
 });
         
     </script>
